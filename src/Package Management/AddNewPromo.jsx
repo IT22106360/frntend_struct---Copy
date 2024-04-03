@@ -45,7 +45,7 @@ const AddNewPromo = () => {
         <body>
             <section>
                 <Container>
-                    <div className="title">New Promo Package Creation</div>
+                    <div className="title">New Promotion Package Creation</div>
                     <div className="leftImage">
                         <img/>{/*left side Image - add this*/}
                     </div>
