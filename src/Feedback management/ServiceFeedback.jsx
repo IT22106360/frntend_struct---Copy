@@ -3,25 +3,24 @@ import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 import {AiFillStar,AiOutlineStar} from 'react-icons/ai'
 
-const Coachfeedback = () => {
+const ServiceFeedback = () => {
 
-    const [feedbackID,setfeedbackId] = useState('')
-    const [custName,setCustName] = useState('')
-    const [custEmail,setCustEmail] = useState('')
-    const [coachName,setcoachName] = useState('')
-    const [coachRating,setcoachRating] = useState(0)
-    const [coachFeedback,setcoachFeedback] = useState('')
+    const [feedbackID,setfeedbackID] = useState('');
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [rating,setRating] = useState(0);
+    const [feedback,setFeedback] = useState('');
     const [error, setError] = useState(null)
     const navigate = useNavigate()
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
 
-        const CoachFeedback = {feedbackID, custName, custEmail, coachName,coachRating, coachFeedback, error}
+        const ServiceFeedback = {feedbackID, name, email, rating, feedback, error}
 
         const response = await fetch('/api/prPackages', {
             method: 'POST',
-            body: JSON.stringify(CoachFeedback),
+            body: JSON.stringify(ServiceFeedback),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -34,10 +33,10 @@ const Coachfeedback = () => {
 
         if (response.ok) {
             setfeedbackID('')
-            setCustName('')
-            setCustEmail('')
-            setcoachRating('')
-            setcoachFeedback('')
+            setName('')
+            setEmail('')
+            setRating('')
+            setFeedback('')
             setError(null)
             console.log('new feedback added', json)
             alert('New feedback added successfully!')
@@ -57,9 +56,9 @@ const Coachfeedback = () => {
                                 type="text"
                                 id="Name"
                                 name="name"
-                                value={custName}
-                                onChange={(e)=>{setCustName(e.target.value)}}
                                 className="promoInput"
+                                value={name}
+                                onChange={(e)=>setName(e.target.value)}
                                 required />
                         </div>
                         <div className="add-promo-row">
@@ -68,33 +67,24 @@ const Coachfeedback = () => {
                                 type="Email"
                                 id="Email"
                                 name="Email"
-                                value={custEmail}
-                                onChange={(e)=>setCustEmail(e.target.value)}
+                                value={email}
+                                onChange={(e)=>
+                                    setEmail(e.target.value)
+                                }
                                 className="promoInput"
                                 required />
                         </div>
-                        <div>
-                        <label class="ftIns">Select Your Fitness Instructor</label>
-                        <select class="insSelect" onChange={(e) => setcoachName(e.target.value)} value={coachName} required>
-                            <option>Select</option>
-                            <option>Mr. Leanne Graham</option>
-                            <option>Mr. Ervin Howell</option>
-                            <option>Mr. Kurtis Weissnat</option>
-                            <option>Mr. Nicholas Runolfsdottir V</option>
-                            <option>Mr. Glenna Reichert</option>
-                            
-                        </select>
-                        </div>
+                        
                         {/*Enter rating*/}
                         <div>
-                        <label class="servicerate">Rate Coaches service</label>
+                        <label class="servicerate">Rate Our service</label>
                         {Array(5).fill().map((_,index)=>
                         rating >= index + 1 ?
                         (<AiFillStar style={{color:'orange'}} onClick={()=>setRating(index + 1)} class="FillStar" />
                         ):(<AiOutlineStar style={{color:'orange'}} onClick={()=>setRating(index + 1)} class="OutlineStar"/>))}
                         </div>
                         <div className="add-promo-row">
-                            <textarea id="inquiry" name="inquiry" placeholder="Enter your opinion here" value={coachFeedback}></textarea>
+                            <textarea id="inquiry" name="inquiry" placeholder="Enter your opinion here" value={feedback} onChange={(e)=>setFeedback(e.target.value)}></textarea>
                         <div class="add-promo-row">
                                     <div className="add-promo-btns">
                                         <div>
@@ -104,6 +94,7 @@ const Coachfeedback = () => {
                                         </div>
                                     </div>
                                     {/*error - this is for me*/}
+                                    {error && <div className="error">{error}</div>}
                                 </div>
                         </div>
                     </form>
@@ -113,4 +104,4 @@ const Coachfeedback = () => {
      );
 }
  
-export default Coachfeedback;
+export default ServiceFeedback;

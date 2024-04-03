@@ -1,4 +1,4 @@
-import Package from  '../Package Management/AddNewPromo';
+import Package from  '../Feedback management/ServiceFeedback';
 const Layout = () => {
     return (  
         <Package/>
