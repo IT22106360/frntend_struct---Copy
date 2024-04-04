@@ -2,12 +2,12 @@ import { useNavigate } from 'react-router-dom'
 
 const Selectoption = () => {
 
-    const navigate = useNavigate();
+     {/*const navigate =useNavigate()*/}
     const handleCoachFeedback = () => {
-        navigate('');
+        {/*navigate ('/promoPackages')*/}
     };
     const handleServiceFeedback = () => {
-        navigate('');
+        {/*navigate ('/promoPackages')*/}
     };
 
     return (  
