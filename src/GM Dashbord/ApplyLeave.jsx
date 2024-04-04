@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 
-const ClientProfile = () => {
+const ApplyLeave = () => {
     return ( 
         <body>
         <section>
@@ -11,33 +11,32 @@ const ClientProfile = () => {
                     <img/>{/*Logo Img - add this*/}
                 </div>
                 <div className="title">Edit Profile</div>
-                <form method="POST" className="add-promo" onSubmit={handleSubmit}>
+                <form method="POST" className="add-promo">
                     <div className="add-promo-row">
                         <input
-                            type="email"
+                            type="Date"
                             id="Name"
                             name="Email"
+                            DateFormat="DD/MM/YYYY"
                             className="promoInput"
-                            placeholder="Enter Email"
+                            placeholder="Date-From:"
                             required />
                     </div>
                     <div className="add-promo-row">
-                        <input
-                            type="password"
-                            id="Details"
-                            name="Details"
+                    <input
+                            type="Date"
+                            id="Name"
+                            name="Email"
+                            DateFormat="DD/MM/YYYY"
                             className="promoInput"
-                            placeholder="Change Password"
+                            placeholder="Date-To:"
                             required />
                     </div>
                     <div className="add-promo-row">
-                        <input
-                            type="number"
-                            id="Name"
-                            name="Email"
-                            className="promoInput"
-                            placeholder="Contact Number"
-                            required />
+                        <select name="Supname" id="Name" className="dropdown" >
+                            <option value="Senura Nawanjana" selected>Senura Nawanjana</option>
+                            {/*Other Options will be build*/}
+                        </select> 
                     </div>
                     <div class="add-promo-row">
                                 <div className="add-promo-btns">
@@ -55,4 +54,4 @@ const ClientProfile = () => {
      );
 }
  
-export default clientProfile;
+export default ApplyLeave;

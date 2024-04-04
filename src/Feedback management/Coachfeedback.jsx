@@ -12,7 +12,7 @@ const Coachfeedback = () => {
     const [coachRating,setcoachRating] = useState(0)
     const [coachFeedback,setcoachFeedback] = useState('')
     const [error, setError] = useState(null)
-    const navigate = useNavigate()
+    {/*const navigate = useNavigate()*/}
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
@@ -41,7 +41,7 @@ const Coachfeedback = () => {
             setError(null)
             console.log('new feedback added', json)
             alert('New feedback added successfully!')
-            navigate('')
+             {/*navigate('/promoPackages')*/}
         }
     }
 

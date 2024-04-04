@@ -11,7 +11,7 @@ const EditProfile = () => {
                         <img/>{/*Profie Img - add this*/}
                     </div>
                     <div className="title">Edit Profile</div>
-                    <form method="POST" className="add-promo" onSubmit={handleSubmit}>
+                    <form method="POST" className="add-promo">
                         <div className="add-promo-row">
                             <input
                                 type="text"

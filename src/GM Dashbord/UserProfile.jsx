@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 
-const ApplyLeave = () => {
+const ClientProfile = () => {
     return ( 
         <body>
         <section>
@@ -11,32 +11,33 @@ const ApplyLeave = () => {
                     <img/>{/*Logo Img - add this*/}
                 </div>
                 <div className="title">Edit Profile</div>
-                <form method="POST" className="add-promo" onSubmit={handleSubmit}>
+                <form method="POST" className="add-promo">
                     <div className="add-promo-row">
                         <input
-                            type="Date"
+                            type="email"
                             id="Name"
                             name="Email"
-                            DateFormat="DD/MM/YYYY"
                             className="promoInput"
-                            placeholder="Date-From:"
+                            placeholder="Enter Email"
                             required />
                     </div>
                     <div className="add-promo-row">
-                    <input
-                            type="Date"
-                            id="Name"
-                            name="Email"
-                            DateFormat="DD/MM/YYYY"
+                        <input
+                            type="password"
+                            id="Details"
+                            name="Details"
                             className="promoInput"
-                            placeholder="Date-To:"
+                            placeholder="Change Password"
                             required />
                     </div>
                     <div className="add-promo-row">
-                        <select name="Supname" id="Name" className="dropdown" >
-                            <option value="Senura Nawanjana" selected>Senura Nawanjana</option>
-                            {/*Other Options will be build*/}
-                        </select> 
+                        <input
+                            type="number"
+                            id="Name"
+                            name="Email"
+                            className="promoInput"
+                            placeholder="Contact Number"
+                            required />
                     </div>
                     <div class="add-promo-row">
                                 <div className="add-promo-btns">
@@ -54,4 +55,4 @@ const ApplyLeave = () => {
      );
 }
  
-export default ApplyLeave;
+export default clientProfile;

@@ -7,7 +7,7 @@ const Login = () => {
                         <img/>{/*Logo Img - add this*/}
                     </div>
                     <div className="title">Sign In</div>
-                    <form method="POST" className="add-promo" onSubmit={handleSubmit}>
+                    <form method="POST" className="add-promo">
                         <div className="add-promo-row">
                             <input
                                 type="email"
