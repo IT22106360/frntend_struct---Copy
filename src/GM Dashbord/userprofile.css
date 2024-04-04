@@ -1,0 +1,49 @@
+.background-container {
+    background-image: url('../images/fd.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .leftImage {
+    background-image: url('../images/logo.png');
+    background-size: contain; /* Ensure the image fits within the container */
+    background-repeat: no-repeat;
+    background-position: top center; /* Position the image at the top and center horizontally */
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.h5{
+    margin-left: 10px; 
+    color: white;
+    font-size: 16px;
+
+}
+
+.User-box{
+    color: white;
+    height: 200px;
+    width: 360px;
+    border-radius: 30px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.629);
+    background: rgba(0, 0, 0, 0.594);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.title{
+    text-align: center;
+    padding-top:3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 28px;
+    
+}

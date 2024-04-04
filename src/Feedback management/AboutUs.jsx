@@ -1,6 +1,6 @@
 import { BsFacebook, BsTwitter } from 'react-icons/bs'
 import { RiInstagramFill} from 'react-icons/ri'
-
+const pic ='';
 const AboutUs = () => {
 
     return ( 
