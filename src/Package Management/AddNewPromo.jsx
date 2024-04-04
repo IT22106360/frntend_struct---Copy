@@ -9,7 +9,7 @@ const AddNewPromo = () => {
     const [prPackageDescription, setPromoDetails] = useState('')
     const [prPackageValidity, setPromoValidity] = useState('')
     const [error, setError] = useState(null)
-    const navigate = useNavigate()
+    {/*const navigate = useNavigate()*/}
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -37,7 +37,7 @@ const AddNewPromo = () => {
             setError(null)
             console.log('new promo added', json)
             alert('New promo package created successfully!')
-            navigate('/promoPackages')
+            {/*navigate('/promoPackages')*/}
         }
     } 
     
@@ -49,7 +49,7 @@ const AddNewPromo = () => {
                     <div className="leftImage">
                         <img/>{/*left side Image - add this*/}
                     </div>
-                    <form method="POST" className="add-promo" onSubmit={handleSubmit}>
+                    <form method="POST" className="add-promo">
                         <div className="add-promo-row">
                             <label for="Name" className="promo-lbl">Package Name:</label>
                             <input
