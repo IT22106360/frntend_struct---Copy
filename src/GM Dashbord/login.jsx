@@ -1,4 +1,7 @@
 import React from 'react';
+import './login.css';
+
+
 const Container = ({ children }) => {
     return <div>{children}</div>;
   };
@@ -6,10 +9,11 @@ const Container = ({ children }) => {
 const Login = () => {
     return ( 
         <body>
-            <section>
-                <Container>
-                <div className="leftImage">
-                        <img/>{/*Logo Img - add this*/}
+            <section className="User-box">
+                <Container >
+                <div>
+                <div class="leftImage"></div>
+                  <div class="h5">WAVESYNC</div>
                     </div>
                     <div className="title">Sign In</div>
                     <form method="POST" className="add-promo">
@@ -19,7 +23,7 @@ const Login = () => {
                                 id="Name"
                                 name="Email"
                                 className="promoInput"
-                                placeholder="Enter Email"
+                                placeholder="  Enter Email"
                                 required />
                         </div>
                         <div className="add-promo-row">
@@ -28,7 +32,7 @@ const Login = () => {
                                 id="Details"
                                 name="Details"
                                 className="promoInput"
-                                placeholder="Password"
+                                placeholder="  Password"
                                 required />
                         </div>
                         <div class="add-promo-row">

@@ -1,23 +1,12 @@
-.background-container {
+body{
     background-image: url('../images/gm.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
 
-  .leftImage {
-    background-image: url('../images/wlogo.png');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: top center; 
-    width: 60px; 
-    height: 80px; 
-    position: absolute;
-    top: 40px;
-    left: 38%;
-    transform: translateX(-50%);
-}
 .title{
+    color: white;
     text-align: center;
     padding-top:20px;
     font-family: "Laila", serif;
@@ -25,14 +14,7 @@
     font-size: 40px;
     
 }
-.h5{
-    margin-left: 42%; 
-    color: white;
-    font-size: 25px;
-    margin-top: -35px;
-    font-family: "Just Me Again Down Here", cursive;
-    
-}
+
 
 .User-box{
     color: white;
@@ -48,18 +30,32 @@
     transform: translate(-50%, -50%);
 
 }
-
-.add-promo{
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+.leftImage {
+    background-image: url('../images/wlogo.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top center; 
+    width: 60px; 
+    height: 80px; 
+    position: absolute;
+    top: 40px;
+    left: 38%;
+    transform: translateX(-50%);
 }
-
 .add-promo-row{
-   display: flex;
-   margin-top: 20px;
-   
-   
+    display: flex;
+    margin-top: 20px;
+    
+    
+ }
+
+ .h5{
+    margin-left: 42%; 
+    color: white;
+    font-size: 25px;
+    margin-top: -35px;
+    font-family: "Just Me Again Down Here", cursive;
+    
 }
 
 .promoInput{
