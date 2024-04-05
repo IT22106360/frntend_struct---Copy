@@ -1,35 +1,45 @@
 .background-container {
-    background-image: url('../images/fd.jpg');
+    background-image: url('../images/gm.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
 
   .leftImage {
-    background-image: url('../images/logo.png');
-    background-size: contain; /* Ensure the image fits within the container */
+    background-image: url('../images/wlogo.png');
+    background-size: contain; 
     background-repeat: no-repeat;
-    background-position: top center; /* Position the image at the top and center horizontally */
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    background-position: top center; 
+    width: 60px; 
+    height: 80px; 
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 40px;
+    left: 38%;
     transform: translateX(-50%);
 }
+.title{
+    text-align: center;
+    padding-top:20px;
+    font-family: "Laila", serif;
+    font-style: normal;
+    font-size: 40px;
+    
+}
 .h5{
-    margin-left: 10px; 
+    margin-left: 42%; 
     color: white;
-    font-size: 16px;
-
+    font-size: 25px;
+    margin-top: -35px;
+    font-family: "Just Me Again Down Here", cursive;
+    
 }
 
 .User-box{
     color: white;
-    height: 200px;
-    width: 360px;
+    height: 350px;
+    width: 300px;
     border-radius: 30px;
-    padding: 40px;
+    padding: 80px;
     background: rgba(0, 0, 0, 0.629);
     background: rgba(0, 0, 0, 0.594);
     position: absolute;
@@ -39,11 +49,40 @@
 
 }
 
-.title{
-    text-align: center;
-    padding-top:3px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-size: 28px;
-    
+.add-promo{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-promo-row{
+   display: flex;
+   margin-top: 20px;
+   
+   
+}
+
+.promoInput{
+    font-size: 20px;
+    font-family: "Laila", serif;
+    width: 100%;
+    border-radius: 20px;
+   color: black;
+}
+.add-promo-btns{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secondary__btn {
+    background-color: aqua;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    font-family: "Laila", serif;
+
+   
+   
 }
