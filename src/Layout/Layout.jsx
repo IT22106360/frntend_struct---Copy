@@ -1,4 +1,4 @@
-import Package from  '../GM Dashbord/UserProfile'
+import Package from  '../Feedback management/Coachfeedback'
 const Layout = () => {
     return (  
         <Package/>
