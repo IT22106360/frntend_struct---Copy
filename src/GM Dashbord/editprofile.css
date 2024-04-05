@@ -5,7 +5,7 @@ body{
     height: 100vh;
   }
 
-.title{
+  .title{
     color: white;
     text-align: center;
     padding-top:20px;
@@ -14,7 +14,6 @@ body{
     font-size: 40px;
     
 }
-
 
 .User-box{
     color: white;
@@ -30,6 +29,7 @@ body{
     transform: translate(-50%, -50%);
 
 }
+
 .leftImage {
     background-image: url('../images/white logo.png');
     background-size: contain; 
@@ -42,11 +42,11 @@ body{
     left: 38%;
     transform: translateX(-50%);
 }
+
 .add-promo-row{
     display: flex;
     margin-top: 20px;
-    
-    
+ 
  }
 
  .h5{
@@ -63,14 +63,24 @@ body{
     font-family: "Laila", serif;
     width: 100%;
     border-radius: 20px;
-   color: black;
+    color: black;
+
 }
 .add-promo-btns{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+   
 }
 
+.primary__btn{
+    background-color: aqua;
+    margin-Right: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    font-family: "Laila", serif;
+}
 .secondary__btn {
     background-color: aqua;
     border-radius: 15px;
@@ -79,3 +89,4 @@ body{
     height: 40px;
     font-family: "Laila", serif;
 }
+

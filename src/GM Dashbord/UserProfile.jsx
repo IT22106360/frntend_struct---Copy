@@ -16,22 +16,9 @@ const ClientProfile = () => {
                   <div class="h5">WAVESYNC</div>
                     </div>
 
-                    <div className="title">Edit Profile</div>
+                    <div className="title">User Profile</div>
 
                     <form method="POST" className="add-promo">
-
-                    <div className="add-promo-row">
-                            <input
-                                type="username"
-                                id="us"
-                                name="us"
-                                className="promoInput"
-                                placeholder="  Username"
-                                required
-                            />
-                        </div>  
-
-
 
                         <div className="add-promo-row">
                             <input

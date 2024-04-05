@@ -1,14 +1,16 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
+import './editprofile.css'
 
 const EditProfile = () => {
     return ( 
         <body>
-            <section>
+            <section className="User-box">
                 <Container>
-                <div className="leftImage">
-                        <img/>{/*Profie Img - add this*/}
+                <div>
+                <div class="leftImage"></div>
+                  <div class="h5">WAVESYNC</div>
                     </div>
                     <div className="title">Edit Profile</div>
                     <form method="POST" className="add-promo">
@@ -18,7 +20,7 @@ const EditProfile = () => {
                                 id="Name"
                                 name="Name"
                                 className="promoInput"
-                                placeholder="Name"
+                                placeholder="  Name"
                                 required />
                         </div>
                         <div className="add-promo-row">
@@ -27,7 +29,7 @@ const EditProfile = () => {
                                 id="Email"
                                 name="Email"
                                 className="promoInput"
-                                placeholder="Email"
+                                placeholder="  Email"
                                 required /> {/*add email Icon here*/}
                         </div>
                         <div className="add-promo-row">
@@ -36,7 +38,7 @@ const EditProfile = () => {
                                 id="Name"
                                 name="Number"
                                 className="promoInput"
-                                placeholder="Contact Number"
+                                placeholder="  Contact Number"
                                 required />
                         </div>
                         <div className="add-promo-row">
@@ -46,15 +48,16 @@ const EditProfile = () => {
                                 name="Number"
                                 DateFormat="dd/MM/yyyy"
                                 className="promoInput"
-                                placeholder="Birthday"
+                                placeholder="  Birthday"
                                 required />
                         </div>
                         <div class="add-promo-row">
                                     <div className="add-promo-btns">
                                         <div>
-                                            <button type='reset' className='secondary__btn' style={{marginRight: '10px'}}>Cancel</button>
+                                            <button type='submit' className='primary__btn'  >Save</button>
+                                            <button type='reset' className='secondary__btn' >Cancel</button>
                                             {/* <button type='submit' className='primary__btn submit create-btn'>Create</button> */}
-                                            <button type='submit' className='primary__btn'>Save</button>
+                                           
                                         </div>
                                     </div>
                                     {/*error - this is for me*/}

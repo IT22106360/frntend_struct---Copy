@@ -1,4 +1,4 @@
-import Package from  '../GM Dashbord/ApplyLeave'
+import Package from  '../GM Dashbord/UserProfile'
 const Layout = () => {
     return (  
         <Package/>
