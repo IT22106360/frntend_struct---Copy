@@ -1,0 +1,86 @@
+body{
+    background-image: url('../images/gm.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .title{
+    color: white;
+    text-align: center;
+    padding-top:20px;
+    font-family: "Laila", serif;
+    font-style: normal;
+    font-size: 40px; 
+}
+
+.User-box{
+    color: white;
+    height: 280px;
+    width: 300px;
+    border-radius: 30px;
+    padding: 80px;
+    background: rgba(0, 0, 0, 0.629);
+    background: rgba(0, 0, 0, 0.594);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.leftImage {
+    background-image: url('../images/white\ logo.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top center; 
+    width: 60px; 
+    height: 80px; 
+    position: absolute;
+    top: 40px;
+    left: 38%;
+    transform: translateX(-50%);
+}
+
+.h5{
+    margin-left: 42%; 
+    color: white;
+    font-size: 25px;
+    margin-top: -35px;
+    font-family: "Just Me Again Down Here", cursive;
+    
+}
+.add-promo-row{
+    display: flex;
+    margin-top: 20px;
+    
+    
+ }
+
+.secondary__btn {
+    background-color: aqua;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    font-family: "Laila", serif;
+}
+.dropdown{
+    border-radius: 20px;
+    width: 100%;
+    font-size: 20px;
+
+}
+
+.promoInput{
+    font-size: 20px;
+    font-family: "Laila", serif;
+    width: 100%;
+    border-radius: 20px;
+    color: black;
+}
+.add-promo-btns{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
