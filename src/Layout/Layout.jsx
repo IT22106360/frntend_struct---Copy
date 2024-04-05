@@ -1,4 +1,4 @@
-import Package from  '../Package Management/AddNewPromo'
+import Package from  '../GM Dashbord/UserProfile'
 const Layout = () => {
     return (  
         <Package/>

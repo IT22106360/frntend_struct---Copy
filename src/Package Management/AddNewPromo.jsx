@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Container } from 'reactstrap'
 import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 const AddNewPromo = () => {
 
     const [prPackageId, setPromoId] = useState('')
@@ -15,29 +16,44 @@ const AddNewPromo = () => {
 
         const promo = {prPackageId, prPackageName, prPackagePrice, prPackageDescription, prPackageValidity}
 
-        const response = await fetch('/api/prPackages', {
-            method: 'POST',
-            body: JSON.stringify(promo),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+        useEffect(()=>{
+            const fetchpromo = async ()=>{
+
+                const response = await fetch('/api/prPackages', {
+                    method: 'POST',
+                    body: JSON.stringify(promo),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+                if (!response.ok) {
+                    setError(json.error)
+                }
+
+                if(response.ok){
+                    setPromoId('')
+                    setPromoName('')
+                    setPromoPrice('')
+                    setPromoDetails('')
+                    setPromoValidity('')
+                    setError(null)
+                    console.log('new promo added', json)
+                    alert('New promo package created successfully!')
+                    {/*navigate('/promoPackages')*/}
+            }}
+
+            fetchpromo()
+            
+        },[])
+
+        
         const json = await response.json()
 
-        if (!response.ok) {
-            setError(json.error)
-        }
+       
 
         if (response.ok) {
-            setPromoId('')
-            setPromoName('')
-            setPromoPrice('')
-            setPromoDetails('')
-            setPromoValidity('')
-            setError(null)
-            console.log('new promo added', json)
-            alert('New promo package created successfully!')
-            {/*navigate('/promoPackages')*/}
+            
         }
     } 
     

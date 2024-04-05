@@ -1,11 +1,17 @@
+import React, { useState, useEffect } from "react"
+import { useNavigate } from 'react-router-dom'
+import { Container} from 'reactstrap'
+
+
 const Login = () => {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
     return ( 
         <body>
             <section>
                 <Container>
-                <div className="leftImage">
-                        <img/>{/*Logo Img - add this*/}
-                    </div>
                     <div className="title">Sign In</div>
                     <form method="POST" className="add-promo">
                         <div className="add-promo-row">
@@ -13,15 +19,19 @@ const Login = () => {
                                 type="email"
                                 id="Name"
                                 name="Email"
+                                value={email}
+                                onChange={(e)=>setEmail(e.target.value)}
                                 className="promoInput"
                                 placeholder="Enter Email"
                                 required />
                         </div>
                         <div className="add-promo-row">
                             <input
-                                type="text"
-                                id="Details"
-                                name="Details"
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 className="promoInput"
                                 placeholder="Password"
                                 required />

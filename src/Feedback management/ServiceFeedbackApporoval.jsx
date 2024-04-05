@@ -11,7 +11,7 @@ function handleClick() {
 
 const ServiceFeedbackApproval = () => {
 
-    const [servicefeedbacks, setServiceFeedbacks] = useState([]);
+    const [servicefeedbacks, setServiceFeedbacks] = useState([])
     const navigate = useNavigate();
     const viewInstructorFeedbackList = () => {
         navigate(`/InstructorFeedbackApproval`);
