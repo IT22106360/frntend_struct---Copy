@@ -1,0 +1,91 @@
+body{
+    background-image: url('../images/fd.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+.User-box{
+    color: white;
+    height: 350px;
+    width: 900px;
+    border-radius: 20px;
+    padding: 60px;
+    padding-top: 80px;
+    background: rgba(0, 0, 0, 0.629);
+    background: rgba(0, 0, 0, 0.594);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.title-code
+{
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    
+}
+
+.main__btn{
+    background-color: aqua;
+    margin-Right: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 240px;
+    height: 40px;
+    font-family: "Poppins", sans-serif;
+
+}
+.table-1{
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+   
+}
+
+.th{
+    background-color: aqua;
+    color: black;
+    
+}
+
+.tr-1{
+    background-color: rgb(154, 252, 249);
+    color: black;
+    
+}
+
+.tr-2{
+    background-color: aqua;
+    color: black;
+    
+}
+.tr-3{
+    background-color: rgb(154, 252, 249);
+    color: black;
+    
+}
+.primary__btn{
+    background-color: aqua;
+    margin-Right: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+.secondary__btn {
+    background-color: rgb(236, 40, 40);
+    border-radius: 10px;
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+}

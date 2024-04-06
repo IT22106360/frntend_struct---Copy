@@ -1,4 +1,4 @@
-import Package from  '../Feedback management/ServiceFeedback'
+import Package from  '../Feedback management/CoachFeedbackApproval'
 const Layout = () => {
     return (  
         <Package/>

@@ -1,6 +1,8 @@
 import { useEffect,useState,useRef } from 'react'
 import { Container, Row, Table } from 'reactstrap'
 import axios from "axios"
+import './coachfeedbackapproval.css'
+
 function handleClick() {
     window.alert('Feedback is approved successfully ')
   }
@@ -83,43 +85,89 @@ function handleClick() {
 
 
     return (  
-        <section ref={ref}>
+        <section ref={ref} className="User-box">
            
            
                 <Container>
-                <div className="title code">Instructor Feedback List</div>
+                <div className="title-code">Instructor Feedback List</div>
                 {/*Service feedback button - leave it for me*/}
-                <button class="secondary__btn" id="btn_position" onClick={handleGeneratePdf}>Generate Feedback Report</button>
+                <button class="main__btn" id="btn_position" onClick={handleGeneratePdf}>Generate Feedback Report</button>
                 <br />
                 
                 <br />
                 <Row>
-                    <Table dark striped bordered hover responsive>
+                    <Table className='table-1' dark striped bordered hover responsive>
                         <thead >
-                            <th>
+                            <th className='th'>
                                 <center>Date</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Customer Name</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Email</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Instructor Name</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Rating</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Feedback</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Approve</center>
                             </th>
-                            <th>
+                            <th className='th'>
                                 <center>Reject</center>
                             </th>
+                            <tr className='tr-1'>
+                                <td>20/03/2024</td>
+                                <td>Lakindu Induwara</td>
+                                <td>lakindu@gmail.com</td>
+                                <td>Senura perera</td>
+                                <td>5</td>
+                                <td>Thumbs Up</td>
+                                <td>
+                                      <button type='submit' className='primary__btn'>Approve</button>
+                                </td>
+                                <td>
+                                     <button type='submit' className='secondary__btn'>Reject</button>
+                                </td>
+                            </tr>
+
+                            <tr className='tr-2'>
+                                <td>15/02/2024</td>
+                                <td>Jagath Wickramasinghe</td>
+                                <td>Jagath Wickramasinghe@gmail.com</td>
+                                <td>Hasindu Gunarathna</td>
+                                <td>2</td>
+                                <td>Good Coach</td>
+                                <td>
+                                      <button type='submit' className='primary__btn'>Approve</button>
+                                </td>
+                                <td>
+                                     <button type='submit' className='secondary__btn'>Reject</button>
+                                </td>
+                            </tr>
+
+                            <tr className='tr-3'>
+                                <td>20/01/2024</td>
+                                <td>Shenal Perera</td>
+                                <td>Shenalperera@gmail.com</td>
+                                <td>Suvin Gunawardana</td>
+                                <td>3</td>
+                                <td>Good Coach</td>
+                                <td>
+                                      <button type='submit' className='primary__btn'>Approve</button>
+                                </td>
+                                <td>
+                                     <button type='submit' className='secondary__btn'>Reject</button>
+                                </td>
+                            </tr >
+
+                     
                         </thead>
                         <tbody>
                             {instructorfeedbacks.map((row) => (
