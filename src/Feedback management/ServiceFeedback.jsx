@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 import {AiFillStar,AiOutlineStar} from 'react-icons/ai'
+import './servicefeedback.css'
 
 const ServiceFeedback = () => {
 
@@ -46,7 +47,7 @@ const ServiceFeedback = () => {
 
     return ( 
         <body>
-            <section>
+            <section className="User-box">
                 <Container>
                     <div className="title">Give your feedback</div>
                     <form method="POST" className="add-promo" onSubmit={handleSubmit}>
@@ -76,21 +77,24 @@ const ServiceFeedback = () => {
                         </div>
                         
                         {/*Enter rating*/}
-                        <div>
-                        <label class="servicerate">Rate Our service</label>
+                        <div className="add-promo-row">
+                        <label class="promo-star">Rate Our service :</label>
+                        <div className="add-star">
                         {Array(5).fill().map((_,index)=>
                         rating >= index + 1 ?
                         (<AiFillStar style={{color:'orange'}} onClick={()=>setRating(index + 1)} class="FillStar" />
                         ):(<AiOutlineStar style={{color:'orange'}} onClick={()=>setRating(index + 1)} class="OutlineStar"/>))}
                         </div>
-                        <div className="add-promo-row">
+                        </div>
+                        <div className="add-promo-area">
                             <textarea id="inquiry" name="inquiry" placeholder="Enter your opinion here" value={feedback} onChange={(e)=>setFeedback(e.target.value)}></textarea>
-                        <div class="add-promo-row">
+                                    <div class="add-promo-row">
                                     <div className="add-promo-btns">
                                         <div>
-                                            <button type='reset' className='secondary__btn' style={{marginRight: '10px'}}>Cancel</button>
+                                        <button type='submit' className='primary__btn' style={{marginRight: '10px'}}>Create</button>
+                                            <button type='reset' className='secondary__btn' >Cancel</button>
                                             {/* <button type='submit' className='primary__btn submit create-btn'>Create</button> */}
-                                            <button type='submit' className='primary__btn'>Create</button>
+                                            
                                         </div>
                                     </div>
                                     {/*error - this is for me*/}
