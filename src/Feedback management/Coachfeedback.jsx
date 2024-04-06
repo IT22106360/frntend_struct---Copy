@@ -54,7 +54,7 @@ const Coachfeedback = () => {
                     <div className="title">Give your feedback</div>
                     <form method="POST" className="add-promo" onSubmit={handleSubmit}>
                         <div className="add-promo-row">
-                            <label htmlFor="Name" className="promo-lbl">Full Name:</label>
+                            <label htmlFor="Name" className="promo-lbl">Full Name :</label>
                             <input
                                 type="text"
                                 id="Name"
@@ -65,7 +65,7 @@ const Coachfeedback = () => {
                                 required />
                         </div>
                         <div className="add-promo-row">
-                            <label htmlFor="Email" className="promo-lbl">Email Address:</label>
+                            <label htmlFor="Email" className="promo-lbl">Email Address :</label>
                             <input
                                 type="Email"
                                 id="Email"
@@ -75,32 +75,36 @@ const Coachfeedback = () => {
                                 className="promoInput"
                                 required />
                         </div>
-                        <div>
-                            <label className="ftIns">Select Your Fitness Instructor</label>
+                        <div class="add-promo-row" >
+                            <label className="promo-lbl">Select Your Instructor :</label>
+                            
                             <select className="insSelect" onChange={(e) => setcoachName(e.target.value)} value={coachName} required>
-                                <option>Select</option>
+                                <option>  Select</option>
                                 <option>Mr. Leanne Graham</option>
                                 <option>Mr. Ervin Howell</option>
                                 <option>Mr. Kurtis Weissnat</option>
                                 <option>Mr. Nicholas Runolfsdottir V</option>
                                 <option>Mr. Glenna Reichert</option>
                             </select>
-                        </div>
+                        
+                        </div >
                         {/*Enter rating*/}
-                        <div>
-                            <label className="servicerate">Rate Coaches service</label>
+                        <div className="add-promo-row">
+                            <label className="promo-star">Rate Coaches service :</label>
+                            <div className="add-star">
                             {Array(5).fill().map((_, index) =>
                                 coachRating >= index + 1 ?
                                     (<AiFillStar key={index} style={{ color: 'orange' }} onClick={() => setcoachRating(index + 1)} className="FillStar" />
                                     ) : (<AiOutlineStar key={index} style={{ color: 'orange' }} onClick={() => setcoachRating(index + 1)} className="OutlineStar" />))}
                         </div>
-                        <div className="add-promo-row">
+                        </div>
+                        <div className="add-promo-area">
                             <textarea id="inquiry" name="inquiry" placeholder="Enter your opinion here" value={coachFeedback} onChange={(e) => setcoachFeedback(e.target.value)}></textarea>
                             </div>
                             <div className="add-promo-row">
                                 <div className="add-promo-btns">
                                     <div>
-                                         <button type='submit' className='primary__btn' style={{ marginRight: '10px' }}>Create</button>
+                                         <button type='submit' className='primary__btn' style={{ marginRight: '80px' }}>Create</button>
                                         <button type='reset' className='secondary__btn' >Cancel</button>
                                         
                                     </div>

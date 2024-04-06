@@ -16,7 +16,7 @@ const ClientProfile = () => {
                   <div class="h5">WAVESYNC</div>
                     </div>
 
-                    <div className="title">User Profile</div>
+                    <div className="title">Users Profile</div>
 
                     <form method="POST" className="add-promo">
 
