@@ -1,4 +1,4 @@
-import Package from  '../GM Dashbord/ApplyLeave'
+import Package from  '../Feedback management/FeedbackDashboard'
 const Layout = () => {
     return (  
         <Package/>
