@@ -1,0 +1,47 @@
+{
+    "customer": [
+      {
+        "NIC": "12345-67890-1234",
+        "Name": "John Doe",
+        "Package": "Premium",
+        "ContactNo": "+1 (555) 123-4567",
+        "CustomerID": "CUS_001"
+      },
+      {
+        "NIC": "54321-09876-4321",
+        "Name": "Jane Smith",
+        "Package": "Basic",
+        "ContactNo": "+1 (555) 987-6543",
+        "CustomerID": "CUS_002"
+      },
+      {
+        "NIC": "98765-43210-5678",
+        "Name": "Alice Johnson",
+        "Package": "Gold",
+        "ContactNo": "+1 (555) 321-9876",
+        "CustomerID": "CUS_003"
+      },
+      {
+        "NIC": "12345-67890-1234",
+        "Name": "John Doe",
+        "Package": "Premium",
+        "ContactNo": "+1 (555) 123-4567",
+        "CustomerID": "CUS_004"
+      },
+      {
+        "NIC": "54321-09876-4321",
+        "Name": "Jane Smith",
+        "Package": "Basic",
+        "ContactNo": "+1 (555) 987-6543",
+        "CustomerID": "CUS_005"
+      },
+      {
+        "NIC": "98765-43210-5678",
+        "Name": "Alice Johnson",
+        "Package": "Gold",
+        "ContactNo": "+1 (555) 321-9876",
+        "CustomerID": "CUS_006"
+      }
+    ]
+  }
+  

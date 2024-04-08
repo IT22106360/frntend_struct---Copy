@@ -1,4 +1,4 @@
-import Package from  '../Feedback management/FeedbackDashboard'
+import Package from  '../GM Dashbord/ManagerSide/Usertable'
 const Layout = () => {
     return (  
         <Package/>

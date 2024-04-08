@@ -3,6 +3,13 @@ import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 
 const EditProfile = () => {
+
+    const [name, setName]=useState("")
+    const [email,setEmail] = useState('')
+    const [contactNo,setContactNo] = useState('')
+    const [dob, setDob] = useState('')
+    const [error, setError] = useState(null)
+
     return ( 
         <body>
             <section>
@@ -19,7 +26,9 @@ const EditProfile = () => {
                                 name="Name"
                                 className="promoInput"
                                 placeholder="Name"
-                                required />
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                />
                         </div>
                         <div className="add-promo-row">
                             <input
@@ -28,26 +37,32 @@ const EditProfile = () => {
                                 name="Email"
                                 className="promoInput"
                                 placeholder="Email"
-                                required /> {/*add email Icon here*/}
+                                value={email}
+                                onChange={(e)=>setEmail(e.target.value)}
+                                /> {/*add email Icon here*/}
                         </div>
                         <div className="add-promo-row">
                             <input
                                 type="number"
-                                id="Name"
+                                id="number"
                                 name="Number"
                                 className="promoInput"
                                 placeholder="Contact Number"
-                                required />
+                                value={contactNo}
+                                onChange={(e)=>setContactNo(e.target.value)}
+                                />
                         </div>
                         <div className="add-promo-row">
                             <input
                                 type="Date"
-                                id="Name"
-                                name="Number"
+                                id="birthday"
+                                name="Birthday"
                                 DateFormat="dd/MM/yyyy"
                                 className="promoInput"
                                 placeholder="Birthday"
-                                required />
+                                value={dob}
+                                onChange={(e)=>setDob(e.target.value)} 
+                                />
                         </div>
                         <div class="add-promo-row">
                                     <div className="add-promo-btns">
@@ -57,7 +72,7 @@ const EditProfile = () => {
                                             <button type='submit' className='primary__btn'>Save</button>
                                         </div>
                                     </div>
-                                    {/*error - this is for me*/}
+                                    {error && <div className="error">{error}</div>}
                                 </div>
                     </form>
                 </Container>

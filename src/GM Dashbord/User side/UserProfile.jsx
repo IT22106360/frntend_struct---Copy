@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom"
 import { Container } from 'reactstrap'
 
 const UserProfile = () => {
+    const [name, setName]=useState("")
+    const [email,setEmail] = useState('')
+    const [contactNo,setContactNo] = useState('')
+    const [dob, setDob] = useState('')
+    const [error, setError] = useState(null)
     return ( 
         <body>
             <section>

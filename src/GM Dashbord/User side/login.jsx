@@ -7,6 +7,7 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState(null)
 
     return ( 
         <body>
@@ -43,7 +44,7 @@ const Login = () => {
                                             {/* <button type='submit' className='primary__btn submit create-btn'>Create</button> */}
                                         </div>
                                     </div>
-                                    {/*error - this is for me*/}
+                                    {error && <div className="error">{error}</div>}
                                 </div>
                     </form>
                 </Container>

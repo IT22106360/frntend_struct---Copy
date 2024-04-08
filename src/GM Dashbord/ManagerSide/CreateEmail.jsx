@@ -7,6 +7,7 @@ const CreateEmail = () => {
     const [content, setContent] = useState("")
     const [error, setError] = useState(null)
     
+    
     return (  
         <section>
             <Container>
