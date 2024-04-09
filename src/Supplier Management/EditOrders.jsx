@@ -9,7 +9,7 @@ const EditOrderSup = () => {
         <body>
             <section>
                 <Container>
-                    <div className="title">Edit Orders</div>
+                <div /*className="title" */ className="text-4xl text-white font-bold align-top mb-8" style={{ WebkitTextStroke: '1px black' }} >Edit Order</div>
                     <Order/>
                 </Container>
             </section>

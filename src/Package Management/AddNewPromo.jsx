@@ -2,8 +2,9 @@ import { useState } from "react"
 import { Container } from 'reactstrap'
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
+import bg from "../Images/package_bg.jpg";
 const AddNewPromo = () => {
-
+    //Rk - functions(line 7 - line 56)
     const [prPackageId, setPromoId] = useState('')
     const [prPackageName, setPromoName] = useState('')
     const [prPackagePrice, setPromoPrice] = useState('')
@@ -50,98 +51,96 @@ const AddNewPromo = () => {
         
         const json = await response.json()
 
-       
-
         if (response.ok) {
             
         }
     } 
+    //Rk-functions
+    const bgStyle = {
+        backgroundImage: `url(${bg})`, 
+        backgroundSize: "cover",
+        height: "100vh",
+    };
+
+    //value, onChange Stuff are my changes  to make the form work with react hooks
     
     return ( 
-        <body>
-            <section>
-                <Container>
-                    <div className="title">New Promotion Package Creation</div>
-                    <div className="leftImage">
-                        <img/>{/*left side Image - add this*/}
-                    </div>
-                    <form method="POST" className="add-promo">
-                        <div className="add-promo-row">
-                            <label for="Name" className="promo-lbl">Package Name:</label>
-                            <input
-                                type="text"
-                                id="Name"
-                                name="name"
-                                value={prPackageName}
-                                onChange={(e)=>
-                                    setPromoName(e.target.value)
-                                }
-                                className="promoInput"
-                                required />
+        <div style={bgStyle}>
+            <div className="flex h-full justify-center items-center ">
+                <div className="bg-black/45 w-1/2 rounded-[50px] py-12 px-14 flex flex-col gap-y-8">
+                    <p className="text-4xl text-white font-bold align-top mb-8" style={{ WebkitTextStroke: '1px black' }} >Add new package</p> {/* Moved "Edit Standard" text above the black box */}
+                     <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="flex flex-col gap-y-4">
+                            <div className="flex justify-between items-center">
+                                <label htmlFor="Name" className="text-white rounded-xl flex items-center pl-5 font-bold text-2xl"  style={{ WebkitTextStroke: '1px black' }}>
+                                    Package Name:
+                                </label>
+                                <input
+                                    className="w-3/5 bg-white/70 h-14 rounded-xl placeholder:text-black placeholder:font-semibold placeholder:text-lg pl-5 text-xl border-b-2 border-gray-300 focus:outline-none focus:border-green-500"
+                                    type="text"
+                                    id="Name"
+                                    name="name"
+                                    value={prPackageName}
+                                    onChange={(e)=>setPromoName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <label htmlFor="Details" className="text-white flex items-center pl-5 font-bold text-2xl" style={{ WebkitTextStroke: '1px black' }}>
+                                    Package Details:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="Details"
+                                    name="Details"
+                                    className="w-3/5 bg-white/70 h-14 rounded-xl placeholder:text-black placeholder:font-semibold placeholder:text-lg pl-5 text-xl border-b-2 border-gray-300 focus:outline-none focus:border-green-500"
+                                    value={prPackageDescription}
+                                    onChange={(e)=>setPromoDetails(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <label htmlFor="Price" className="text-white flex items-center pl-5 font-bold text-2xl" style={{ WebkitTextStroke: '1px black' }}>
+                                    Package Price:
+                                </label>
+                                <input
+                                    type="text"
+                                    id="Price"
+                                    name="Price"
+                                    className="w-3/5 bg-white/70 e h-14 rounded-xl placeholder:text-black placeholder:font-semibold placeholder:text-lg pl-5 text-xl border-b-2 border-gray-300 focus:outline-none focus:border-green-500"
+                                    value={prPackagePrice}
+                                    onChange={(e)=>setPromoPrice(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <label htmlFor="Date" className="text-white flex items-center pl-5 font-bold text-2xl font-size" style={{ WebkitTextStroke: '1px black' }}>
+                                    Package Validity:
+                                </label>
+                                <input
+                                    type="date"
+                                    id="Date"
+                                    name="Date"
+                                    className="w-3/5 bg-white/70 h-14 rounded-xl placeholder:text-black placeholder:font-semibold placeholder:text-lg pl-5 text-xl border-b-2 border-gray-300 focus:outline-none focus:border-green-500"
+                                    value={prPackageValidity}
+                                    onChange={(e)=>setPromoValidity}
+                                    required
+                                />
+                            </div>
+                            <div className="flex justify-between">
+                                <button type="reset" className="bg-blue-500 py-3 px-8 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-300">
+                                    Cancel
+                                </button>
+                                <button type="submit" className="bg-blue-500 py-3 px-8 rounded-lg text-lg font-bold hover:bg-blue-700 transition duration-300">
+                                    Save
+                                </button>                 
+                            </div>
+                            {error && <div className="error">{error}</div>} {/*This is my one*/}
                         </div>
-                        <div className="add-promo-row">
-                            <label for="Details" className="promo-lbl">Package Details:</label>
-                            <input
-                                type="text"
-                                id="Details"
-                                name="Details"
-                                value={prPackageDescription}
-                                onChange={(e)=>
-                                    setPromoDetails(e.target.value)
-                                }
-                                className="promoInput"
-                                required />
-                        </div>
-                        <div className="add-promo-row">
-                            <label for="Price" className="promo-lbl">Package Price:</label>
-                            <input
-                                type="text"
-                                id="Price"
-                                name="Price"
-                                className="promoInput"
-                                placeholder="LKR"
-                                value={prPackagePrice}                                                                                                                                                                                                                                                                                                                                                                                                                                            
-                                onChange={(e)=>setPromoPrice(e.target.value)}
-                                required />
-                        </div>
-                        <div class="add-promo-row">
-                                    <label for="promoPrice" className="add-promo-label">Package Price :</label>
-                                    <input 
-                                        type="text" 
-                                        className="add-promo-input"
-                                        name='price'
-                                        onChange={(e) => setPromoPrice(e.target.value)}
-                                        value={prPackagePrice}
-                                        required
-                                    />
-                                </div>
-                                <div class="add-promo-row">
-                                    <label for="promoValidity" className="add-promo-label">Package Validity  :</label>
-                                    <input
-                                        type="date" 
-                                        className="add-promo-input"
-                                        name="validity"
-                                        selected={prPackageValidity} 
-                                        onChange={(e) => setPromoValidity(e.target.value)}
-                                        value={prPackageValidity}
-                                        dateFormat="dd/MM/yyyy"
-                                        required
-                                    />
-                                </div>
-                                <div class="add-promo-row">
-                                    <div className="add-promo-btns">
-                                        <div>
-                                            <button type='reset' className='secondary__btn' style={{marginRight: '10px'}}>Cancel</button>
-                                            {/* <button type='submit' className='primary__btn submit create-btn'>Create</button> */}
-                                            <button type='submit' className='primary__btn'>Create</button>
-                                        </div>
-                                    </div>
-                                    {error && <div className="error">{error}</div>}
-                                </div>
-                    </form>
-                </Container>
-            </section>
-        </body>
+                    </form> 
+                </div>
+            </div>
+        </div>       
      );
 }
  

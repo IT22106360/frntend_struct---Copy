@@ -8,7 +8,7 @@ const PlaceOrderSup = () => {
         <body>
             <section>
                 <Container>
-                    <div className="title">Place Orders</div>
+                <div /*className="title" */ className="text-4xl text-white font-bold align-top mb-8" style={{ WebkitTextStroke: '1px black' }} >Place Orders</div>
                     <Order/>
                 </Container>
             </section>

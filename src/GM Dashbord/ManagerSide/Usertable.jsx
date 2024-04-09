@@ -23,6 +23,7 @@ const UserTable = () => {
     }, [])
 
     const handleDelete = (cusID) => {
+      const {custID} = cusID
         Swal.fire({
           title: "Are you sure?",
           text: "You won't be able to revert this!",
@@ -34,7 +35,7 @@ const UserTable = () => {
         }).then(async (result) => {
           if (result.isConfirmed) {
             try {
-              const response = await axios.delete('http://localhost:8000/customer/${cusID}');
+              const response = await axios.delete('http://localhost:8000/customer/${custID}');
     
               if (response.status === 200) {
                 Swal.fire({
@@ -99,7 +100,7 @@ const UserTable = () => {
                         <button
                         className="bg-red-500 border-2 border-black rounded-full p-1 px-4 text-white font-bold"
                         onClick={() =>
-                            handleDelete(customer.CustomerID)
+                            handleDelete({cusID: customer.CustomerID})
                         }
                         >
                         Delete
