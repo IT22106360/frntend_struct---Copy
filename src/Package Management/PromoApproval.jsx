@@ -126,4 +126,4 @@ const PromoApproval = () => {
     )
 }
 
-export default PromoApproval
+export default PromoApproval;

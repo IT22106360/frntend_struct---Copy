@@ -27,4 +27,4 @@ const PromoDetails_user = ({ promo, highlightedPackage }) => {
     )
 }
 
-export default PromoDetails_user
+export default PromoDetails_user;

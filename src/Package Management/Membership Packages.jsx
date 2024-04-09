@@ -184,4 +184,4 @@ const MembershipPackages = () => {
     )
 }
 
-export default MembershipPackages
+export default MembershipPackages;

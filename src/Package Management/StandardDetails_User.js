@@ -26,4 +26,4 @@ const StandardDetails_user = ({ standard, highlightedPackage }) => {
     )
 }
 
-export default StandardDetails_user
+export default StandardDetails_user;
