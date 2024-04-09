@@ -24,4 +24,4 @@ function MMdashboard() {
     )
 }
 
-export default MMdashboard
+export default MMdashboard;

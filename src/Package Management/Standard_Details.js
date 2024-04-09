@@ -20,4 +20,4 @@ const StandardDetails = ({ standard }) => {
     )
 }
 
-export default StandardDetails
+export default StandardDetails;

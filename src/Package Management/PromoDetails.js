@@ -24,4 +24,4 @@ const PromoDetails = ({ promo }) => {
     )
 }
 
-export default PromoDetails
+export default PromoDetails;

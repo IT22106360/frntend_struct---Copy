@@ -25,4 +25,4 @@ const PromoGraph = ({ series, labels }) => {
     )
 }
 
-export default PromoGraph
+export default PromoGraph;
