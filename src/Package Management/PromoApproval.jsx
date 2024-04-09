@@ -125,3 +125,5 @@ const PromoApproval = () => {
         </section>
     )
 }
+
+export default PromoApproval

@@ -43,3 +43,4 @@ const PromoPackages = () => {
         </section>
     )
 }
+export default PromoPackages

@@ -31,3 +31,4 @@ const StandardPackages = () => {
         </section>
     )
 }
+export  default StandardPackages;
